@@ -2,7 +2,7 @@ interface URL {
   url: string;
 }
 
-export interface Author {
+export interface IAuthor {
   bio: string;
   id: string;
   name: string;
@@ -15,7 +15,7 @@ export interface Category {
 }
 
 export interface Post {
-  author: Author;
+  author: IAuthor;
   createdAt: string;
   slug: string;
   title: string;
@@ -36,7 +36,7 @@ export interface ApiResponse {
   node: Post;
 }
 
-export interface PostWidget {
+export interface IPostWidget {
   title: string;
   featuredImage: URL;
   createdAt: string;
@@ -66,7 +66,7 @@ export interface CommentWidget {
 }
 
 export interface GraphQLWidget {
-  posts: PostWidget[];
+  posts: IPostWidget[];
 }
 
 export interface GraphQLFeaturedPosts {

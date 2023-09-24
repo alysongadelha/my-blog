@@ -1,20 +1,27 @@
-import { Author } from '@/interfaces';
+import { IAuthor } from '@/interfaces';
 import Image from 'next/image';
 
 type Props = {
-  author: Author;
+  author: IAuthor;
 };
 
 const Author = ({ author }: Props) => {
+  if (author?.name === undefined) {
+    console.error('Please provide a valid Author', { author });
+    return;
+  }
+
   return (
-    <div className='relative mb-8 mt-20 rounded-lg bg-black bg-opacity-20 p-12 text-center'>
-      <div className='absolute -top-14 left-0 right-0'>
+    <div
+      data-testid='author-component'
+      className='relative mb-8 mt-20 rounded-lg bg-black bg-opacity-20 p-12 text-center'
+    >
+      <div className='absolute -top-14 left-0 right-0 flex justify-center'>
         <Image
           alt={author.name}
-          unoptimized
-          height={100}
-          width={100}
-          className='h-24 w-24 rounded-full align-middle'
+          height={90}
+          width={90}
+          className='rounded-full align-middle'
           src={author.photo.url}
         />
       </div>

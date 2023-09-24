@@ -1,5 +1,5 @@
 'use client';
-import { PostWidget } from '@/interfaces';
+import { IPostWidget } from '@/interfaces';
 import { getRecentPosts, getSimilarPosts } from '@/services';
 import moment from 'moment';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ type Props = {
 };
 
 const PostWidget = ({ categories, slug }: Props) => {
-  const [relatedPosts, setRelatedPosts] = useState<PostWidget[]>([]);
+  const [relatedPosts, setRelatedPosts] = useState<IPostWidget[]>([]);
 
   useEffect(() => {
     if (slug && categories?.length) {
