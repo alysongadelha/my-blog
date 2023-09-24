@@ -1,8 +1,8 @@
 export type {
-  Author,
+  IAuthor,
   ApiResponse,
   Post,
-  PostWidget,
+  IPostWidget,
   GraphQLWidget,
   GraphQLPosts,
   GraphQLCategories,
@@ -14,6 +14,6 @@ export type {
   GraphQLComments,
   GraphQLPostDetail,
   CommentWidget,
-} from "./Graphql";
+} from './Graphql';
 
-export type { Comment } from "./Comment";
+export type { Comment } from './Comment';

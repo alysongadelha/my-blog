@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 export const getContentFragment = (
   index: any,
@@ -24,9 +24,9 @@ export const getContentFragment = (
   }
 
   switch (type) {
-    case "heading-three":
+    case 'heading-three':
       return (
-        <h3 key={index} className="text-xl font-semibold mb-4">
+        <h3 key={index} className='mb-4 text-xl font-semibold'>
           {modifiedText.map(
             (
               item:
@@ -49,9 +49,9 @@ export const getContentFragment = (
           )}
         </h3>
       );
-    case "paragraph":
+    case 'paragraph':
       return (
-        <p key={index} className="mb-8">
+        <p key={index} className='mb-8'>
           {modifiedText.map(
             (
               item:
@@ -74,9 +74,9 @@ export const getContentFragment = (
           )}
         </p>
       );
-    case "heading-four":
+    case 'heading-four':
       return (
-        <h4 key={index} className="text-md font-semibold mb-4">
+        <h4 key={index} className='text-md mb-4 font-semibold'>
           {modifiedText.map(
             (
               item:
@@ -99,7 +99,7 @@ export const getContentFragment = (
           )}
         </h4>
       );
-    case "image":
+    case 'image':
       return (
         <Image
           key={index}
